@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <body>
+      <h1> Atributos en HTML</h1>
+      <p> Los atributos en HTML son propiedades que se añaden a las etiquetas para proporcionar más información o controlar su comportamiento</p>
+      <p> Los atributos siempre están presentes dentro de la etiquet de apertura  se compone de un nombre y un valor</p>
+
+      <!--
+      
+      Sintaxis
+      
+      <etiqueta atributo="valor">...</etiqueta>
+      
+      -->
+
+      <!---
+      
+      Atributo src 
+      
+      Específica l URL de n recurso como imagen, audio o video.
+      
+      Se usan las etiquetas como <img>, <audio>, <video>, <iframe>
+        
+        se debe definir la ubicación del arcivo que se va a mostrar al cargar.
+        
+        -->
+
+        <img src="./1f947.png"></img>
+        <video src="./video.mp4"></video>
+        <AUDIO src="./audio.mp3"></AUDIO>
+        <iframe src="./charmander.webp" frameborder="0"></iframe>
+
+        <!---
+        
+        2.- Alt=""
+        
+        Proporciona un texto alternativo para cuando una imagen no se puede mostrar
+        
+        Esto es para volver accesibles las imagene pra los usuarios con discapacidades visuales
+        
+        -->
+
+        <img src="./unaimagen.png"alt="este es un mensaje que descrbe la imagen no cargada"/>
+
+        <!--
+        
+        3.-Target=""
+        
+        Define donde se abrira un enlace
+        
+        Blank se abra una pestaña nueva
+        self se bre en una misma pesaña (valor por defecto)
+
+        -->
+
+        <a href="https:instagram.com">Sigueme en instagram</a>
+
+        <!--
+        
+        4.-rel=""
+
+        Específica la relación entre el documento actual y un documento enlazado.
+
+        -->
+
+        <link rel="styleseet" href="./style.css">
+
+        <a href="ttps://www.google.com"
+        rel="nofollow"></a>
+
+        <script rel="javascript" src="./script.js">
+          let mensaje="Hola mundo"
+          console.log(mensaje)
+        </script>
+
+        <!--
+        5.Style=""
+        
+        Funcion para defnir estilos css en línea directamente en la etiqueta
+        
+        Aplique estos estilos a un elemento directamente. No es recomendable usarlo mucho, lo recmendable es usar hojas de estilo
+        
+        Se puede pasar a la mayoría de las etiquetas
+        
+        -->
+
+        <p style="color:white; font: size 56px;;">Texto de color blnquito! :D </p>
+
+        <!--
+        
+        6.- Id=""
+
+        Definir un identificador único para una etiqueta
+
+        Funcionan para cualquier etiqueta y se utilizan para enlazar un elemento con una oja de estilos, o con  javascript.
+
+        El valor del id, nosotros lo definimos
+
+        -->
+
+        <button id="mibotoncito">Pikale Aquí!</button>
+
+        <script rel="javascript">
+          const boton =document.getElementById("mibotoncito");
+          boton.addEventListener("click",mensaje);
+          
+          function mensaje() {
+            alert("Ya casi terminamos!") 
+          }
+          
+        </script>
+
+
+
+
+
+    </body>
+  </head>
+</html>
