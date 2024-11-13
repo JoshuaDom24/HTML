@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Formularios</title>
+  </head>
+  <body>
+    <h1> Ejercicio Formulario</h1>
+
+    <!-- Seccoión Contacto -->
+
+      <sectio>
+        <h2>Contacto</h2>
+
+          <!--
+            Atibutos comunes en inputs
+
+              placeholder="valor" ->  Mostrar un texto dentro del campo antes de que el usuario escriba algo.
+              Es comun una sugerencia del dato que se espera.
+
+              required ->  No recibe valor, es un atributo que se le llama booleano. Indica que el campo es obligatorio. y debe ser completado antes de poder enviar el formulario.
+        
+          -->
+
+        <form id="formulario">
+          <label for="nombre">Nombre</label>
+          <input type="nombre" id="nombre" placeholder="Diego Martinez" required/>
+          <br>
+
+          <label for="email">Correo Electronico</label>
+          <input type="email" id="email" placeholder="example@example.com" required/>
+          <br>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" placeholder="Deja un Mensaje"></textarea>
+          <br>
+
+          <button type="submit">Enviar 🚀</button>
+        </form>
+        
+        <!-- Contenedor de mensaje de Confirmacion (Ficticio)-->
+
+        <div id="mensajeConfirmar" style="display: none;">
+          <p>¡Gracias por enviar tus datos, tendras una respuesta en los siguientes dias!</p>
+        </div>
+
+        <script>
+          /* Codigo para que funcione el Formulario. */
+          // Obtener el formulario y el mensaje de Confirmación.
+
+          const miFormulario = document.getElementById("formulario");
+          const mensajeConfirmacion = document.getElementById("mensajeConfirmar");
+
+          // Añadir un "escuchador" / "listener" para el "evento" del boton
+
+          miFormulario.addEventListener( "submit" , function(event){
+            // Codigo que se va a ejecutar cuando el usuario le de al boton.
+            //alert("Haz dado click en el boton enviar!")
+
+            event.preventDefault(); // Evita que el formulario recargue la pagina
+
+            //se oclte el elemento <form>
+            
+            miFormulario.style.display = "none";
+
+            // Mostramos el elemento <div> con el mensaje de confirmacion.
+
+            mensajeConfirmacion.style.display = "block"
+          } )
+          
+
+        </script>
+      </sectio>
+  </body>
+</html>
